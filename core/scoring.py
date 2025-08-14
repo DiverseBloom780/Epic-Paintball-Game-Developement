@@ -1,14 +1,14 @@
-from game.team import Team
+# core/scoring.py
 class ScoringSystem:
     def __init__(self):
-        self.team_scores = {}
+        self.scores = {}
 
     def add_team(self, team):
-        self.team_scores[team.name] = 0
+        self.scores[team.name] = 0
 
-    def add_point(self, team_name, pts=1):
-        if team_name in self.team_scores:
-            self.team_scores[team_name] += pts
+    def add(self, team_name, points=1):
+        if team_name in self.scores:
+            self.scores[team_name] += points
 
     def get(self, team_name):
-        return self.team_scores.get(team_name, 0)
+        return self.scores.get(team_name, 0)

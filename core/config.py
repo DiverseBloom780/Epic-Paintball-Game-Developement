@@ -1,28 +1,18 @@
-
+# core/config.py
 # Window / Timing
 WIDTH, HEIGHT = 960, 600
 FPS = 60
 
 # Player
-PLAYER_SIZE = 36
-PLAYER_SPEED = 270  # pixels per second
+PLAYER_SPEED = 12.0  # Panda units/sec equivalent
 PLAYER_MAX_HP = 100
 RESPAWN_TIME = 3.0
 
 # Gun / Paintball
-PAINTBALL_RADIUS = 6
-PAINTBALL_SPEED = 600
-FIRE_COOLDOWN = 0.12
 AMMO_CAPACITY = 20
-RELOAD_TIME = 1.0
+RELOAD_TIME = 1.2
 
-# Enemies
-ENEMY_SIZE = 34
-ENEMY_SPEED = 210
-ENEMY_COOLDOWN = 0.35
-ENEMY_ACCURACY_NOISE = 0.07  # radians
-
-# Colors
+# Colors (RGB 0-255 for compatibility with old code)
 WHITE = (255,255,255)
 BLACK = (0,0,0)
 RED   = (230,70,70)

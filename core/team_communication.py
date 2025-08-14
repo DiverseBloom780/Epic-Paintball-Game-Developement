@@ -1,13 +1,13 @@
-from collections import deque
-
+# core/team_communication.py
 class TeamCommunication:
     def __init__(self, max_msgs=8):
-        self.messages = deque(maxlen=max_msgs)
+        self.max_msgs = max_msgs
+        self.messages = []
 
-    def send(self, sender, message):
-        s = f"{sender}: {message}"
-        self.messages.appendleft(s)
-        print(s)  # also print to console
+    def send(self, who, msg):
+        line = f"[{who}] {msg}"
+        self.messages.append(line)
+        self.messages = self.messages[-self.max_msgs:]
 
     def list(self):
         return list(self.messages)
