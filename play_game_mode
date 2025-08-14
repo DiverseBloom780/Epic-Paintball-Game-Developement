@@ -1,0 +1,47 @@
+# game_modes.py
+
+from enum import Enum
+
+class GameMode(Enum):
+    CAPTURE_THE_FLAG = 1
+    CENTER_FLAG = 2
+    ELIMINATION = 3
+    SCENARIO = 4
+
+class GameModes:
+    def __init__(self):
+        self.game_modes = {
+            GameMode.CAPTURE_THE_FLAG: self.capture_the_flag,
+            GameMode.CENTER_FLAG: self.center_flag,
+            GameMode.ELIMINATION: self.elimination,
+            GameMode.SCENARIO: self.scenario
+        }
+
+    def capture_the_flag(self):
+        print("Capture the Flag game mode")
+        # Implement game logic for Capture the Flag
+
+    def center_flag(self):
+        print("Center Flag game mode")
+        # Implement game logic for Center Flag
+
+    def elimination(self):
+        print("Elimination game mode")
+        # Implement game logic for Elimination
+
+    def scenario(self):
+        print("Scenario game mode")
+        # Implement game logic for Scenario
+
+    def play_game_mode(self, game_mode):
+        if game_mode in self.game_modes:
+            self.game_modes[game_mode]()
+        else:
+            print("Invalid game mode")
+
+def main():
+    game_modes = GameModes()
+    game_modes.play_game_mode(GameMode.CAPTURE_THE_FLAG)
+
+if __name__ == "__main__":
+    main()
