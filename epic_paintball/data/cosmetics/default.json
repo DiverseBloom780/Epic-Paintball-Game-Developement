@@ -1,0 +1,6 @@
+{
+  "player_color": "#40A0FF",
+  "speed": 260.0,
+  "ammo": 30,
+  "fire_cooldown": 0.12
+}
